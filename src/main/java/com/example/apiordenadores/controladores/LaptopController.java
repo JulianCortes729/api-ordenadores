@@ -27,6 +27,11 @@ public class LaptopController {
         System.out.println(message);
         return "hello desde controlador";
     }
+    @GetMapping("/admin")
+    public String mensajeAd(){
+        System.out.println(message);
+        return "Este mensaje lo puede mostrar el ADMIN";
+    }
 
 
     @GetMapping("/laptops")
@@ -45,6 +50,7 @@ public class LaptopController {
         }
 
     }
+
 
     @PostMapping("/laptops")
     public ResponseEntity<Laptop> create(@RequestBody Laptop laptop){
